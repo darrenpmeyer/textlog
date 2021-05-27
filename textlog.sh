@@ -52,7 +52,8 @@ fi
 # If there's not a logfile for today, make it
 if ! [ -f "$logfile" ]
 then
-	touch "${logfile}"
+	# touch "${logfile}"
+   echo -en "# Worklog for ${datespec}\n\n- " > "${logfile}"
 fi
 
 # make sure we have a valid editor before continuing
